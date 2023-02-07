@@ -18,40 +18,23 @@ class _ViewLineChartState extends State<ViewLineChart> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(
-        appPadding,
-        appPadding * 1.5,
-        appPadding,
-        appPadding,
-      ),
-      child: LineChart(LineChartData(
+        padding: EdgeInsets.fromLTRB(
+          appPadding,
+          appPadding * 1.5,
+          appPadding,
+          appPadding,
+        ),
+        child: LineChart(LineChartData(
           gridData: FlGridData(
             show: false,
           ),
           titlesData: FlTitlesData(
             show: true,
-            bottomTitles: SideTitles(
-                showTitles: true,
-                reservedSize: 22,
-                getTitles: (value) {
-                  switch (value.toInt()) {
-                    case 1:
-                      return 'Sun';
-                    case 4:
-                      return 'Mon';
-                    case 7:
-                      return 'Tue';
-                    case 10:
-                      return 'Wed';
-                    case 13:
-                      return 'Thr';
-                    case 16:
-                      return 'Fri';
-                    case 19:
-                      return 'Sat';
-                  }
-                  return '';
-                }),
+            bottomTitles: AxisTitles(
+                sideTitles: SideTitles(
+              showTitles: true,
+              reservedSize: 22,
+            )),
           ),
           borderData: FlBorderData(
             show: false,
@@ -62,27 +45,25 @@ class _ViewLineChartState extends State<ViewLineChart> {
           minY: 6,
           lineBarsData: [
             LineChartBarData(
-                spots: [
-                  FlSpot(0, 3),
-                  FlSpot(4, 2),
-                  FlSpot(9, 4),
-                  FlSpot(12, 3),
-                  FlSpot(15, 5),
-                  FlSpot(18, 3),
-                  FlSpot(20, 4),
-                ],
-                isCurved: true,
-                colors: [primaryColor],
-                barWidth: 5,
-                isStrokeCapRound: true,
-                dotData: FlDotData(show: false),
-                belowBarData: BarAreaData(
-                    show: true,
-                    colors:
-                        gradientColors.map((e) => e.withOpacity(0.3)).toList(),
-                    gradientFrom: Offset(0, 0),
-                    gradientTo: Offset(0, 1.75)))
-          ])),
-    );
+              spots: [
+                FlSpot(0, 3),
+                FlSpot(4, 2),
+                FlSpot(9, 4),
+                FlSpot(12, 3),
+                FlSpot(15, 5),
+                FlSpot(18, 3),
+                FlSpot(20, 4),
+              ],
+              isCurved: true,
+              color: primaryColor,
+              barWidth: 5,
+              isStrokeCapRound: true,
+              dotData: FlDotData(show: false),
+              belowBarData: BarAreaData(
+                show: true,
+              ),
+            ),
+          ],
+        )));
   }
 }

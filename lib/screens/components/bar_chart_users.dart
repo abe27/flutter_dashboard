@@ -12,150 +12,125 @@ class BarChartUsers extends StatelessWidget {
         groupsSpace: 15,
         titlesData: FlTitlesData(
             show: true,
-            bottomTitles: SideTitles(
-                showTitles: true,
-                margin: appPadding,
-                getTitles: (double value) {
-                  if (value == 2) {
-                    return 'jan 6';
-                  }
-                  if (value == 4) {
-                    return 'jan 8';
-                  }
-                  if (value == 6) {
-                    return 'jan 10';
-                  }
-                  if (value == 8) {
-                    return 'jan 12';
-                  }
-                  if (value == 10) {
-                    return 'jan 14';
-                  }
-                  if (value == 12) {
-                    return 'jan 16';
-                  }
-                  if (value == 14) {
-                    return 'jan 18';
-                  } else {
-                    return '';
-                  }
-                }),
-            leftTitles: SideTitles(
-                showTitles: true,
-                margin: appPadding,
-                getTitles: (double value) {
-                  if (value == 2) {
-                    return '1K';
-                  }
-                  if (value == 6) {
-                    return '2K';
-                  }
-                  if (value == 10) {
-                    return '3K';
-                  }
-                  if (value == 14) {
-                    return '4K';
-                  } else {
-                    return '';
-                  }
-                })),
+            bottomTitles: AxisTitles(
+                sideTitles: SideTitles(
+              showTitles: true,
+            )),
+            leftTitles: AxisTitles(
+                sideTitles: SideTitles(
+              showTitles: true,
+            ))),
         barGroups: [
           BarChartGroupData(x: 1, barRods: [
             BarChartRodData(
-                y: 10,
+                fromY: 10,
                 width: 20,
-                colors: [primaryColor],
-                borderRadius: BorderRadius.circular(5))
+                color: primaryColor,
+                borderRadius: BorderRadius.circular(5),
+                toY: 10)
           ]),
           BarChartGroupData(x: 2, barRods: [
             BarChartRodData(
-                y: 3,
+                fromY: 3,
+                toY: 3,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 3, barRods: [
             BarChartRodData(
-                y: 12,
+                fromY: 12,
+                toY: 12,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 4, barRods: [
             BarChartRodData(
-                y: 8,
+                fromY: 8,
+                toY: 8,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 5, barRods: [
             BarChartRodData(
-                y: 6,
+                fromY: 6,
+                toY: 6,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 6, barRods: [
             BarChartRodData(
-                y: 10,
+                fromY: 10,
+                toY: 10,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 7, barRods: [
             BarChartRodData(
-                y: 16,
+                fromY: 16,
+                toY: 16,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 8, barRods: [
             BarChartRodData(
-                y: 6,
+                fromY: 6,
+                toY: 6,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 9, barRods: [
             BarChartRodData(
-                y: 4,
+                fromY: 4,
+                toY: 4,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 10, barRods: [
             BarChartRodData(
-                y: 9,
+                fromY: 9,
+                toY: 9,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 11, barRods: [
             BarChartRodData(
-                y: 12,
+                fromY: 12,
+                toY: 12,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 12, barRods: [
             BarChartRodData(
-                y: 2,
+                fromY: 2,
+                toY: 2,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 13, barRods: [
             BarChartRodData(
-                y: 13,
+                fromY: 13,
+                toY: 13,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
           BarChartGroupData(x: 14, barRods: [
             BarChartRodData(
-                y: 15,
+                fromY: 15,
+                toY: 15,
                 width: 20,
-                colors: [primaryColor],
+                color: primaryColor,
                 borderRadius: BorderRadius.circular(5))
           ]),
         ]));
